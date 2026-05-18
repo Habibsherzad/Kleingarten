@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "admin123",
+    "role": "admin",
+    "full_name": "Andi Schaufel",
+    "garden_name": "Verwaltung",
+    "bio": "Admin des Vereins"
+  },
+  {
+    "id": 2,
+    "username": "heide",
+    "password": "1234",
+    "role": "user",
+    "full_name": "Heide Witzka",
+    "garden_name": "Parzelle 12",
+    "bio": "Gemüse und Blumen"
+  },
+  {
+    "id": 3,
+    "username": "Harry Hacke",
+    "password": "hacke123",
+    "role": "user",
+    "full_name": "Herr von und zu Hary Hacke",
+    "garden_name": "Parzele 27",
+    "bio": "Grillmeister"
+  },
+  {
+    "id": 4,
+    "username": "garten_gott",
+    "password": "gott123",
+    "role": "user",
+    "full_name": "Fred vom Beet",
+    "garden_name": "Parzelle 2",
+    "bio": "Gefliesste Veranda, Hollywood-Schaukel, kühles Bier"
+  }
+]

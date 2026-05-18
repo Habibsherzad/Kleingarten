@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "user_id": 2,
+    "title": "Meine Tomaten 2026",
+    "content": "Dieses Jahr wachsen die Tomaten besonders gut.",
+    "tags": [
+      "tomaten",
+      "gemüse",
+      "sommer"
+    ],
+    "image": "",
+    "visibility": "public",
+    "created_at": "2026-05-21 16:40"
+  },
+  {
+    "id": 2,
+    "user_id": 2,
+    "title": "Planung der Hecke",
+    "content": "Details nur für Vereinsmitglieder.",
+    "tags": [
+      "hecke",
+      "pflege"
+    ],
+    "image": "",
+    "visibility": "private",
+    "created_at": "2026-05-21 16:41"
+  },
+  {
+    "id": 3,
+    "user_id": 3,
+    "title": "Wochenende",
+    "content": "Denkt dran, Samstag ab 18 Uhr vor dem Vereinshaus, gemeinsames grillen",
+    "tags": [
+      "Grill",
+      "Fleisch",
+      "Smoke",
+      "gemeinsam"
+    ],
+    "image": "uploads/groerer_Grill.jpg",
+    "visibility": "public",
+    "created_at": "2026-05-21 22:26"
+  },
+  {
+    "id": 4,
+    "user_id": 4,
+    "title": "Lästerschwestern",
+    "content": "Wenn  Tr.... und In.... so vor der Veranda stehen, weiß ein Jeder bescheid, das es wieder neuen Gesprächsstoff gibt.",
+    "tags": [
+      "lästern",
+      "veranda",
+      "news"
+    ],
+    "image": "uploads/garten_news.jpg",
+    "visibility": "private",
+    "created_at": "2026-05-21 22:45"
+  }
+]
