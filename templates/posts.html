@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Beiträge{% endblock %}
+{% block content %}
+<h1>Beiträge</h1>
+
+{% for post in posts %}
+  <article class="card">
+    <h2><a href="{{ url_for('post_detail', post_id=post.id) }}">{{ post.title }}</a></h2>
+    <p><strong>Autor:</strong> {{ post.author_name }}</p>
+    <p>{{ post.content[:200] }}...</p>
+    <p><strong>Tags:</strong> {{ post.tags | join(", ") }}</p>
+    <p><strong>Sichtbarkeit:</strong> {{ post.visibility }}</p>
+  </article>
+{% else %}
+  <p>Keine Beiträge vorhanden.</p>
+{% endfor %}
+{% endblock %}

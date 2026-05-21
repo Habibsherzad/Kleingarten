@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Admin{% endblock %}
+{% block content %}
+<h1>Adminbereich</h1>
+
+<h2>Benutzer</h2>
+{% for u in users %}
+  <div class="card">
+    <p>{{ u.username }} - {{ u.role }} - {{ u.full_name }}</p>
+  </div>
+{% endfor %}
+
+<h2>Beiträge</h2>
+{% for post in posts %}
+  <div class="card">
+    <p>{{ post.title }} - {{ post.visibility }} - {{ post.author_name }}</p>
+  </div>
+{% endfor %}
+
+<h2>Nachrichten</h2>
+{% for message in messages %}
+  <div class="card">
+    <p>{{ message.subject }} - {{ message.recipient_type }} - {{ message.sender_name }}</p>
+  </div>
+{% endfor %}
+{% endblock %}

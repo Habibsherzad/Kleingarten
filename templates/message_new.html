@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Nachricht senden{% endblock %}
+{% block content %}
+<h1>Nachricht senden</h1>
+
+<form method="post">
+  <input type="text" name="subject" placeholder="Betreff" required>
+  <textarea name="content" placeholder="Nachricht" required></textarea>
+
+  <label>Empfängerart:</label>
+  <select name="recipient_type">
+    <option value="public">public</option>
+    <option value="private">private</option>
+  </select>
+
+  <label>Empfänger auswählen:</label>
+  <select name="recipient_ids" multiple size="6">
+    {% for u in users %}
+      {% if u.id != user.id %}
+        <option value="{{ u.id }}">{{ u.username }} ({{ u.role }})</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+
+  <label>Gruppe:</label>
+  <input type="text" name="group_name" placeholder="z. B. Arbeitsgruppe Hecke">
+  <button type="submit">Senden</button>
+</form>
+{% endblock %}

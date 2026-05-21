@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Postfach{% endblock %}
+{% block content %}
+<h1>Postfach</h1>
+
+{% for message in messages %}
+  <div class="card">
+    <h3>{{ message.subject }}</h3>
+    <p><strong>Von:</strong> {{ message.sender_name }}</p>
+    <p>{{ message.content }}</p>
+    <p><strong>Typ:</strong> {{ message.recipient_type }}</p>
+  </div>
+{% else %}
+  <p>Keine Nachrichten vorhanden.</p>
+{% endfor %}
+{% endblock %}

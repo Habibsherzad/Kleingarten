@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h1>Dashboard</h1>
+<p>Willkommen, {{ user.full_name }} ({{ user.role }})</p>
+
+<h2>Deine Beiträge</h2>
+{% for post in posts %}
+  <div class="card">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.content }}</p>
+    <p><strong>Sichtbarkeit:</strong> {{ post.visibility }}</p>
+  </div>
+{% else %}
+  <p>Noch keine Beiträge vorhanden.</p>
+{% endfor %}
+
+<h2>Deine Nachrichten</h2>
+{% for message in messages %}
+  <div class="card">
+    <h3>{{ message.subject }}</h3>
+    <p>{{ message.content }}</p>
+    <p><strong>Von:</strong> {{ message.sender_name }}</p>
+  </div>
+{% else %}
+  <p>Keine Nachrichten vorhanden.</p>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Startseite{% endblock %}
+{% block content %}
+<h1>Willkommen im Schrebergartenverein</h1>
+<p>Hier findest du öffentliche Beiträge und Vereinsinfos.</p>
+
+{% for post in posts %}
+  <article class="card">
+    <h2><a href="{{ url_for('post_detail', post_id=post.id) }}">{{ post.title }}</a></h2>
+    <p><strong>Von:</strong> {{ post.author_name }}</p>
+    <p>{{ post.content[:180] }}...</p>
+    <p><strong>Tags:</strong> {{ post.tags | join(", ") }}</p>
+  </article>
+{% else %}
+  <p>Keine öffentlichen Beiträge vorhanden.</p>
+{% endfor %}
+{% endblock %}

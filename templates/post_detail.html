@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Beitrag{% endblock %}
+{% block content %}
+<article class="card">
+  <h1>{{ post.title }}</h1>
+  <p><strong>Autor:</strong> {{ post.author_name }}</p>
+  <p>{{ post.content }}</p>
+  <p><strong>Tags:</strong> {{ post.tags | join(", ") }}</p>
+  <p><strong>Sichtbarkeit:</strong> {{ post.visibility }}</p>
+
+  {% if post.image %}
+    <img src="{{ url_for('static', filename=post.image) }}" alt="Beitragsbild" class="post-img">
+  {% endif %}
+</article>
+{% endblock %}

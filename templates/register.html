@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Registrieren{% endblock %}
+{% block content %}
+<h1>Registrieren</h1>
+<form method="post">
+  <input type="text" name="username" placeholder="Benutzername" required>
+  <input type="password" name="password" placeholder="Passwort" required>
+  <input type="text" name="full_name" placeholder="Vollname" required>
+  <input type="text" name="garden_name" placeholder="Garten / Parzelle" required>
+  <textarea name="bio" placeholder="Kurzbeschreibung"></textarea>
+  <select name="role">
+    <option value="user">user</option>
+    <option value="admin">admin</option>
+  </select>
+  <button type="submit">Registrieren</button>
+</form>
+{% endblock %}
